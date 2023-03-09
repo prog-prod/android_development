@@ -17,6 +17,7 @@
 package it_school.sumdu.edu.droidcafe;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,5 +31,14 @@ public class OrderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+        String orderName = getIntent().getStringExtra("orderName");
+
+        if(orderName != null) {
+            setTitle(orderName);
+        }
+
+        TextView textName = (TextView) findViewById(R.id.orderName);
+        textName.setText(orderName);
+
     }
 }

@@ -21,12 +21,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 /**
  * This app demonstrates images used as buttons and a floating action button
@@ -36,10 +39,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
  */
 public class MainActivity extends AppCompatActivity {
 
+    private String orderName;
+    protected TextView orderText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        orderText = (TextView) findViewById(R.id.orderName);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -100,25 +107,24 @@ public class MainActivity extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
     }
 
+
     /**
      * Shows a message that the donut image was clicked.
      */
-    public void showDonutOrder(View view) {
-        displayToast(getString(R.string.donut_order_message));
+    public void showOrder(View view) {
+        Intent intent = new Intent(MainActivity.this,
+                OrderActivity.class);
+        if(view.getId() == R.id.donut){
+            orderName = "Donut";
+        } else if(view.getId() == R.id.ice_cream){
+            orderName = "IceCreamOrder";
+        } else if(view.getId() == R.id.froyo){
+            orderName = "FroyoOrder";
+        }
+
+        intent.putExtra("orderName", orderName);
+        startActivity(intent);
     }
 
-    /**
-     * Shows a message that the ice cream sandwich image was clicked.
-     */
-    public void showIceCreamOrder(View view) {
-        displayToast(getString(R.string.ice_cream_order_message));
-    }
-
-    /**
-     * Shows a message that the froyo image was clicked.
-     */
-    public void showFroyoOrder(View view) {
-        displayToast(getString(R.string.froyo_order_message));
-    }
 
 }
