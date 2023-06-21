@@ -1,6 +1,5 @@
 *.iml
 .gradle
-MobileDevices
 /local.properties
 /.idea/caches
 /.idea/libraries
