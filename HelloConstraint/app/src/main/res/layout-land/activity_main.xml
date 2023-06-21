@@ -44,29 +44,13 @@
         android:onClick="sayHello"
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button_count"
+        app:layout_constraintBottom_toTopOf="@+id/button_zero"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button_count"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="85dp"
-        android:background="@color/colorGreen"
-        android:onClick="countUp"
-        android:text="@string/button_label_count"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_zero"
-        app:layout_constraintVertical_bias="0.788" />
+
 
     <Button
         android:id="@+id/button_zero"
@@ -84,13 +68,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_toast" />
 
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorGreen"
+        android:onClick="countUp"
+        android:text="@string/button_label_count"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_zero" />
     <TextView
         android:id="@+id/show_count"
         android:layout_width="0dp"
-        android:layout_height="325dp"
+        android:layout_height="match_parent"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="22dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#FFFF00"

@@ -19,18 +19,16 @@ package it_school.sumdu.edu.hellotoast;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 /**
  * Displays two Buttons and a TextView.
  * - Pressing the TOAST button shows a Toast.
  * - Pressing the COUNT button increases the displayed mCount.
- *
+ * <p>
  * Note: Fixing behavior when device is rotated is a challenge exercise for the student.
  */
 
@@ -38,21 +36,34 @@ public class MainActivity extends AppCompatActivity {
 
     private int mCount = 0;
     private TextView mShowCount;
+    private Button button_count, button_zero;
+    final static String mShowCountKey = "NAME_VARIABLE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mShowCount = (TextView) findViewById(R.id.show_count);
+        button_zero = (Button) findViewById(R.id.button_zero);
+        button_count = (Button) findViewById(R.id.button_count);
+
+    }
+
+    public void resetCounter(View view) {
+        mCount = 0;
+        if (mShowCount != null) {
+            mShowCount.setText(Integer.toString(mCount));
+            button_zero.setBackgroundResource(R.color.colorGrey);
+        }
     }
 
     /*
-    * Shows a Toast when the TOAST button is clicked.
-    *
-    * @param view The view that triggered this onClick handler.
-    *             Since a toast always shows on the top,
-    *             the passed in view is not used.
-    */
+     * Shows a Toast when the TOAST button is clicked.
+     *
+     * @param view The view that triggered this onClick handler.
+     *             Since a toast always shows on the top,
+     *             the passed in view is not used.
+     */
     public void sayHello(View view) {
 //        Toast toast = Toast.makeText(this, R.string.toast_message,
 //                Toast.LENGTH_SHORT);
@@ -63,15 +74,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    * Increments the number in the TextView when the COUNT button is clicked.
-    *
-    * @param view The view that triggered this onClick handler.
-    *             Since the count always appears in the TextView,
-    *             the passed in view is not used.
-    */
+     * Increments the number in the TextView when the COUNT button is clicked.
+     *
+     * @param view The view that triggered this onClick handler.
+     *             Since the count always appears in the TextView,
+     *             the passed in view is not used.
+     */
     public void countUp(View view) {
         mCount++;
         if (mShowCount != null)
             mShowCount.setText(Integer.toString(mCount));
+
+        if ((mCount % 2) == 0) {
+            button_count.setBackgroundResource(R.color.colorAccent);
+        } else {
+            button_count.setBackgroundResource(R.color.colorPurple);
+        }
+
+        if (mCount != 0) {
+            button_zero.setBackgroundResource(R.color.colorGreen);
+        }
     }
 }

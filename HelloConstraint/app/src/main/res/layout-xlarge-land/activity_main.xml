@@ -31,7 +31,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_begin="123dp"
-        app:layout_constraintStart_toEndOf="@+id/button_count" />
+        app:layout_constraintStart_toEndOf="@+id/button_zero" />
 
     <Button
         android:id="@+id/button_count2"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_count" />
+        app:layout_constraintTop_toBottomOf="@+id/button_zero" />
 
     <Button
         android:id="@+id/button_toast"
@@ -60,14 +60,14 @@
         android:onClick="sayHello"
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button_count"
+        app:layout_constraintBottom_toTopOf="@+id/button_zero"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_count"
+        android:id="@+id/button_zero"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
