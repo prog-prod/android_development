@@ -1,0 +1,75 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.android.recipe_book"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="26" />
+9-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:5:5-28:19
+12        android:allowBackup="true"
+12-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:6:9-35
+13        android:debuggable="true"
+14        android:icon="@mipmap/ic_launcher"
+14-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:7:9-43
+15        android:label="@string/app_name"
+15-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:8:9-41
+16        android:roundIcon="@mipmap/ic_launcher_round"
+16-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:9:9-54
+17        android:supportsRtl="true"
+17-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:10:9-35
+18        android:testOnly="true"
+19        android:theme="@style/AppTheme" >
+19-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:11:9-40
+20        <activity
+20-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:12:9-16:40
+21            android:name="com.example.android.recipe_book.RecipeActivity"
+21-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:13:13-74
+22            android:exported="false"
+22-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:16:13-37
+23            android:label="@string/title_recipe"
+23-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:14:13-49
+24            android:parentActivityName="com.example.android.recipe_book.MainActivity" />
+24-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:15:13-86
+25        <activity
+25-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:17:9-27:20
+26            android:name="com.example.android.recipe_book.MainActivity"
+26-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:18:13-72
+27            android:exported="true"
+27-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:21:13-36
+28            android:label="@string/app_name"
+28-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:19:13-45
+29            android:theme="@style/AppTheme.NoActionBar" >
+29-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:20:13-56
+30            <intent-filter>
+30-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:22:13-26:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:23:17-69
+31-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:23:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:25:17-77
+33-->/Users/andreypo/AndroidStudioProjects/labs/Recipe_book_RecyclerView/app/src/main/AndroidManifest.xml:25:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <meta-data
+37-->[com.android.support:design:26.1.0] /Users/andreypo/.gradle/caches/transforms-3/1ed4053219abc13e279676d5959816a0/transformed/design-26.1.0/AndroidManifest.xml:26:9-28:38
+38            android:name="android.support.VERSION"
+38-->[com.android.support:design:26.1.0] /Users/andreypo/.gradle/caches/transforms-3/1ed4053219abc13e279676d5959816a0/transformed/design-26.1.0/AndroidManifest.xml:27:13-51
+39            android:value="26.1.0" />
+39-->[com.android.support:design:26.1.0] /Users/andreypo/.gradle/caches/transforms-3/1ed4053219abc13e279676d5959816a0/transformed/design-26.1.0/AndroidManifest.xml:28:13-35
+40        <meta-data
+40-->[android.arch.lifecycle:runtime:1.0.0] /Users/andreypo/.gradle/caches/transforms-3/59991ad7b9f74729b6e7cb121d211d41/transformed/runtime-1.0.0/AndroidManifest.xml:25:9-27:47
+41            android:name="android.arch.lifecycle.VERSION"
+41-->[android.arch.lifecycle:runtime:1.0.0] /Users/andreypo/.gradle/caches/transforms-3/59991ad7b9f74729b6e7cb121d211d41/transformed/runtime-1.0.0/AndroidManifest.xml:26:13-58
+42            android:value="27.0.0-SNAPSHOT" />
+42-->[android.arch.lifecycle:runtime:1.0.0] /Users/andreypo/.gradle/caches/transforms-3/59991ad7b9f74729b6e7cb121d211d41/transformed/runtime-1.0.0/AndroidManifest.xml:27:13-44
+43    </application>
+44
+45</manifest>
